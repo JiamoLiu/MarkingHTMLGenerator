@@ -52,6 +52,7 @@ for question in questions:
     comments = ""
     if (lost_points == ""):
         marks_data[question] = [question, 0, "None"]
+        print("======================")
         continue
     if (lost_points != ""):
         comments = input("What are your comments?\n")
