@@ -27,7 +27,7 @@ def add_row(data, numberoftabs, table_row_tag):
 
 
 
-
+import comment_selector_jiamo as jiamo_comments
 
 debug = False
 table_heading_tag = "th"
@@ -46,6 +46,7 @@ marks_data = {}
 
 for question in questions:
     print("Marking question: {}\n".format(question))
+    jiamo_comments.print_question_comments(question)
     lost_points = input("How many points did he lose? Press enter to skip to next question.\n")
     while(lost_points.isnumeric() == False and lost_points != ""):
         lost_points = input("Please type in a number. How many points did he lose? Press enter to skip to next question.\n")
@@ -56,6 +57,7 @@ for question in questions:
         continue
     if (lost_points != ""):
         comments = input("What are your comments?\n")
+    comments = jiamo_comments.get_question_comments_html(question,comments)
     marks_data[question] = [question, lost_points, comments]
     print("======================")
 
