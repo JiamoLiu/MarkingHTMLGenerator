@@ -7,6 +7,36 @@ comments = {
     "1b":{
         "1":"Failed to indicate that no congestion control is required.",
         "2":"Failed to indicate that link is able to handle the traffic even though all applications are transmitting simultaneously."
+    },
+    "2a":{
+        "1": "Answer should be: m/s seconds"
+    },
+    "2b":{
+        "1": "Answer should be: L/R seconds"
+    },
+    "2c":{
+        "1": "Answer should be: m/s + L/R seconds"
+    },
+    "2d":{
+        "1": "Answer: The bit is just leaving Host A"
+    },
+    "2e":{
+        "1": "Answer: The first bit is in the link and has not reached Host B"
+    },
+    "2f":{
+        "1":"Answer: The first bit has reached Host B"
+    },
+    "2g":{
+        "1":"Answer: m = sL/R = 893KM"
+    },
+    "3a":{
+        "1":"Answer: d = L/R_1 + L/R_2 + d_1/s_1 + d_2/s_2 + d_proc"
+    },
+    "3a":{
+        "1":"Answer: Plug into the equation to get: 8 + 8 +16 +4 +1 = 37 msec"
+    },
+    "4":{
+        "1":"Answer: d = L/R + d_1/s_1 + d_2/s_2, 8+16+4 = 28 msec"
     }
 }
 

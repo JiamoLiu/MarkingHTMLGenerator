@@ -35,6 +35,7 @@ table_body_tag = "td"
 table_row_tag = "tr"
 marker = "Jiamo Liu"
 questions = "1a,1b,2a,2b,2c,2d,2e,2f,2g,3a,3b,4".split(",")
+points = [4,4,2,2,2,2,2,2,2,6,5,6]
 student_name = ""
 
 if (debug == False):
@@ -45,7 +46,7 @@ print("======================")
 marks_data = {}
 
 for question in questions:
-    print("Marking question: {}\n".format(question))
+    print("Marking question: {} ({} points)\n".format(question, points[questions.index(question)]))
     jiamo_comments.print_question_comments(question)
     lost_points = input("How many points did he lose? Press enter to skip to next question.\n")
     while(lost_points.isnumeric() == False and lost_points != ""):
