@@ -32,7 +32,7 @@ comments = {
     "3a":{
         "1":"Answer: d = L/R_1 + L/R_2 + d_1/s_1 + d_2/s_2 + d_proc"
     },
-    "3a":{
+    "3b":{
         "1":"Answer: Plug into the equation to get: 8 + 8 +16 +4 +1 = 37 msec"
     },
     "4":{
@@ -52,8 +52,11 @@ def print_question_comments(question_number):
 def get_question_comments_html(question_number, input_comments):
     if (question_number not in comments):
         return input_comments
+
     indexes = input_comments.split(",")
     res = ""
     for index in indexes:
+        if index not in comments[question_number]:
+            return input_comments
         res = res + "{}. {}<br>".format(index,comments[question_number][index])
     return res
