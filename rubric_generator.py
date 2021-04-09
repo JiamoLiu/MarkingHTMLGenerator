@@ -29,7 +29,7 @@ def add_row(data, numberoftabs, table_row_tag):
 
 
 
-debug =False
+debug = False
 table_heading_tag = "th"
 table_body_tag = "td"
 table_row_tag = "tr"
@@ -41,12 +41,14 @@ if (debug == False):
     student_name = input("What is the student's name?\n")
 else:
     student_name = "abc"
-
+print("======================")
 marks_data = {}
 
 for question in questions:
     print("Marking question: {}\n".format(question))
     lost_points = input("How many points did he lose? Press enter to skip to next question.\n")
+    while(lost_points.isnumeric() == False and lost_points != ""):
+        lost_points = input("Please type in a number. How many points did he lose? Press enter to skip to next question.\n")
     comments = ""
     if (lost_points == ""):
         marks_data[question] = [question, 0, "None"]
@@ -54,6 +56,7 @@ for question in questions:
     if (lost_points != ""):
         comments = input("What are your comments?\n")
     marks_data[question] = [question, lost_points, comments]
+    print("======================")
 
 
 print(generate_html(marks_data))
